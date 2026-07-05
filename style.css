@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #064e3b; /* Hijau tua elegan */
+  --primary-light: #e6f4ea; /* Hijau muda lembut */
+  --accent: #059669; /* Hijau emerald */
+  --whatsapp: #25d366; /* Warna khas WhatsApp */
+  --whatsapp-hover: #20ba5a;
+  --text-main: #0f172a; /* Hitam pekat kontras tinggi */
+  --text-muted: #475569; /* Abu-abu kontras cukup */
+  --bg-light: #f8fafc; /* Abu-abu sangat muda */
+  --bg-white: #ffffff;
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 80px; /* Spasi untuk floating CTA */
+  font-size: 16px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 640px; /* Ukuran optimal layar HP & kenyamanan baca */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header / Brand */
+.brand-header {
+  padding: 16px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+/* Section General */
+section {
+  padding: 56px 0;
+  background-color: var(--bg-white);
+}
+
+section.bg-alt {
+  background-color: var(--bg-light);
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Hero Section */
+.hero {
+  padding: 32px 0 48px 0;
+  text-align: center;
+  background-color: var(--bg-white);
+}
+
+.hero h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 95%;
+  margin: 0 auto 24px auto;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Video Wrapper (YouTube Responsive) */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Button CTA */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--whatsapp);
+  color: var(--bg-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 28px;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover, .btn-whatsapp:active {
+  background-color: var(--whatsapp-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Dalil / Kutipan Section */
+.dalil-section {
+  text-align: center;
+  background-color: var(--primary-light);
+  border-top: none;
+  border-bottom: none;
+}
+
+.dalil-card {
+  background-color: var(--bg-white);
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--accent);
+  text-align: left;
+}
+
+.dalil-arabic {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.dalil-translation {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.dalil-source {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Wasilah / Tawasul Section */
+.wasilah-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.wasilah-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.wasilah-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Grid 2 kolom di mobile */
+  gap: 12px;
+}
+
+.wasilah-card {
+  background: var(--bg-white);
+  border: 1px solid #f1f5f9;
+  padding: 18px 14px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.wasilah-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.wasilah-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.wasilah-card p {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Doa Box / Prayer Box */
+.prayer-box {
+  background-color: var(--primary-light);
+  border: 1.5px dashed var(--accent);
+  padding: 24px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.prayer-title {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prayer-arabic {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.prayer-latin {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.prayer-translation {
+  font-size: 13px;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Keutamaan / Manfaat Section */
+.keutamaan-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  align-items: flex-start;
+  border: 1px solid #f1f5f9;
+}
+
+.benefit-number {
+  background: var(--primary);
+  color: var(--bg-white);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.benefit-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.benefit-text p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Stats Section (Realisasi/Counter) */
+.stats-section {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  padding: 44px 0;
+  border-top: none;
+  border-bottom: none;
+}
+
+.stats-img-container {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stats-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
+  gap: 12px;
+  text-align: center;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: #34d399; /* Emerald green accent */
+}
+
+.stats-label {
+  font-size: 12px;
+  color: #d1fae5;
+  line-height: 1.3;
+}
+
+/* Carousel Section (Amanah Penyaluran) */
+.gallery-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.gallery-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.gallery-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.gallery-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 4px 4px 20px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.gallery-carousel .gallery-item {
+  flex: 0 0 85%; /* 85% lebar screen agar slide berikutnya terintip */
+  scroll-snap-align: start;
+  margin: 0;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+}
+
+.gallery-img-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #eaeaea;
+}
+
+.gallery-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-info {
+  padding: 16px;
+}
+
+.gallery-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--primary-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.gallery-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.gallery-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Dots indicator */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background: var(--accent);
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* Galeri Aktivitas Nyata Grid */
+.activity-grid-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.activity-grid-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.activity-grid-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1 / 1; /* Kotak seragam */
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #f1f5f9;
+}
+
+.activity-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.activity-grid-item:hover img, .activity-grid-item:active img {
+  transform: scale(1.05);
+}
+
+.activity-grid-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  color: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Testimonials Section */
+.testi-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.testi-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.testi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testi-item {
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid #f1f5f9;
+}
+
+.testi-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.testi-avatar {
+  background: var(--primary-light);
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.testi-meta h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.testi-meta span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.testi-stars {
+  color: #f59e0b; /* Amber rating stars */
+  font-size: 11px;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.testi-content {
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Bottom Area (Unified CTA & Footer) */
+.bottom-area {
+  background-color: var(--primary);
+  color: #cbd5e1;
+  padding: 56px 0 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.final-cta-block {
+  margin-bottom: 40px;
+}
+
+.final-cta-block h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.final-cta-block p {
+  font-size: 14px;
+  color: #a7f3d0; /* Soft mint green */
+  margin-bottom: 28px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.bottom-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 32px 0;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Jadikan logo putih di dark background */
+}
+
+.footer-brand h4 {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-desc {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-contact i {
+  color: #34d399; /* Emerald accent */
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.legal-badge {
+  display: inline-block;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4px;
+}
+
+.footer-copyright {
+  margin-top: 40px;
+  font-size: 11px;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+/* Floating CTA for Mobile */
+.floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  padding: 12px 20px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.06);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.floating-cta .btn-whatsapp {
+  max-width: 100%;
+  box-shadow: none;
+}
+
+/* Responsive adjustment for non-mobile screen (preview comfort) */
+@media (min-width: 641px) {
+  body {
+    background-color: #f1f5f9;
+  }
+  .container {
+    background: var(--bg-white);
+    box-shadow: var(--shadow-md);
+    padding: 0 32px;
+  }
+  .brand-header, section, .bottom-area {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .floating-cta {
+    max-width: 640px;
+    margin: 0 auto;
+    border-radius: 16px 16px 0 0;
+  }
+}
