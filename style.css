@@ -787,19 +787,79 @@ section.bg-alt {
 @media (min-width: 641px) {
   body {
     background-color: #f1f5f9;
+    padding-bottom: 0; /* Remove bottom padding since floating CTA is hidden */
   }
   .container {
     background: var(--bg-white);
     box-shadow: var(--shadow-md);
-    padding: 0 32px;
+    padding: 0 40px;
+    max-width: 1000px;
   }
   .brand-header, section, .bottom-area {
-    max-width: 640px;
+    max-width: 1000px;
     margin: 0 auto;
   }
+  
+  /* Hide floating CTA on desktop */
   .floating-cta {
-    max-width: 640px;
-    margin: 0 auto;
-    border-radius: 16px 16px 0 0;
+    display: none;
+  }
+  
+  /* Expand grids on desktop */
+  .wasilah-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .activity-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  /* Gallery carousel to grid on desktop */
+  .gallery-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: visible;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-carousel .gallery-item {
+    flex: none;
+    margin: 0;
+  }
+  
+  /* Hide carousel dots on desktop */
+  .carousel-dots {
+    display: none;
+  }
+  
+  /* Stats grid improvement */
+  .stats-grid {
+    gap: 24px;
+  }
+  
+  /* Benefit list on desktop */
+  .benefit-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+  
+  .benefit-number {
+    margin: 0 auto 12px auto;
+  }
+  
+  .benefit-text h3,
+  .benefit-text p {
+    text-align: center;
   }
 }
